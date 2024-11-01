@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------
+# Variables & Mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/**
+ * The Snap Share buttons wrapper
+ */
+.snapshare-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .snapshare-list li {
+    width: 100% !important;
+  }
+}
+@media (min-width: 760px) {
+  .snapshare-list li {
+    display: inline-block;
+  }
+  .snapshare-list li:first-child {
+    padding-left: 0;
+  }
+  .snapshare-list li:last-child {
+    padding-right: 0;
+  }
+}
+
+/**
+ * Snap Share list for fullwidth buttons
+ */
+@media (min-width: 760px) {
+  .snapshare-list.snapshare-fullwidth {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+  }
+}
+/**
+ * The default button
+ */
+.snapshare-profile-button {
+  display: block;
+  margin: 0 0 10px 0;
+}
+@media (min-width: 760px) {
+  .snapshare-profile-button {
+    padding: 0 5px;
+  }
+}
+.snapshare-profile-button > a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ccc;
+  border: 2px solid transparent;
+  border-bottom-color: #b8b8b8;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.snapshare-profile-button > a:before {
+  content: "\f1e0";
+  font-family: FontAwesome;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+}
+.snapshare-profile-button > a:hover, .snapshare-profile-button > a:active, .snapshare-profile-button > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #b8b8b8;
+}
+
+/*--------------------------------------------------------------
+# Styles
+--------------------------------------------------------------*/
+/* Flat */
+/**
+ * The Twitter button
+ */
+.snapshare-style-flat .snapshare-profile-button.snapshare-twitter-button > a {
+  background-color: #1da1f2;
+  border-bottom-color: #0d8cda;
+}
+.snapshare-style-flat .snapshare-profile-button.snapshare-twitter-button > a:before {
+  content: "\f099";
+}
+.snapshare-style-flat .snapshare-profile-button.snapshare-twitter-button > a:hover, .snapshare-style-flat .snapshare-profile-button.snapshare-twitter-button > a:active, .snapshare-style-flat .snapshare-profile-button.snapshare-twitter-button > a:focus {
+  background-color: #0d8cda;
+}
+
+/**
+ * The Facebook button
+ */
+.snapshare-style-flat .snapshare-profile-button.snapshare-facebook-button > a {
+  background-color: #3b5998;
+  border-bottom-color: #30487b;
+}
+.snapshare-style-flat .snapshare-profile-button.snapshare-facebook-button > a:before {
+  content: "\f09a";
+}
+.snapshare-style-flat .snapshare-profile-button.snapshare-facebook-button > a:hover, .snapshare-style-flat .snapshare-profile-button.snapshare-facebook-button > a:active, .snapshare-style-flat .snapshare-profile-button.snapshare-facebook-button > a:focus {
+  background-color: #30487b;
+}
+
+/**
+ * The Google Plus button
+ */
+.snapshare-style-flat .snapshare-profile-button.snapshare-gplus-button > a {
+  background-color: #ea4335;
+  border-bottom-color: #df2717;
+}
+.snapshare-style-flat .snapshare-profile-button.snapshare-gplus-button > a:before {
+  content: "\f0d5";
+}
+.snapshare-style-flat .snapshare-profile-button.snapshare-gplus-button > a:hover, .snapshare-style-flat .snapshare-profile-button.snapshare-gplus-button > a:active, .snapshare-style-flat .snapshare-profile-button.snapshare-gplus-button > a:focus {
+  background-color: #df2717;
+}
+
+/* Inverse */
+.snapshare-style-inverse .snapshare-profile-button > a {
+  font-weight: bold;
+}
+
+/**
+ * The Twitter button
+ */
+.snapshare-style-inverse .snapshare-profile-button.snapshare-twitter-button > a {
+  background-color: transparent;
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+.snapshare-style-inverse .snapshare-profile-button.snapshare-twitter-button > a:before {
+  content: "\f099";
+}
+.snapshare-style-inverse .snapshare-profile-button.snapshare-twitter-button > a:hover, .snapshare-style-inverse .snapshare-profile-button.snapshare-twitter-button > a:active, .snapshare-style-inverse .snapshare-profile-button.snapshare-twitter-button > a:focus {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+/**
+ * The Facebook button
+ */
+.snapshare-style-inverse .snapshare-profile-button.snapshare-facebook-button > a {
+  background-color: transparent;
+  border-color: #3b5998;
+  color: #3b5998;
+}
+.snapshare-style-inverse .snapshare-profile-button.snapshare-facebook-button > a:before {
+  content: "\f09a";
+}
+.snapshare-style-inverse .snapshare-profile-button.snapshare-facebook-button > a:hover, .snapshare-style-inverse .snapshare-profile-button.snapshare-facebook-button > a:active, .snapshare-style-inverse .snapshare-profile-button.snapshare-facebook-button > a:focus {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+/**
+ * The Google Plus button
+ */
+.snapshare-style-inverse .snapshare-profile-button.snapshare-gplus-button > a {
+  background-color: transparent;
+  border-color: #ea4335;
+  color: #ea4335;
+}
+.snapshare-style-inverse .snapshare-profile-button.snapshare-gplus-button > a:before {
+  content: "\f0d5";
+}
+.snapshare-style-inverse .snapshare-profile-button.snapshare-gplus-button > a:hover, .snapshare-style-inverse .snapshare-profile-button.snapshare-gplus-button > a:active, .snapshare-style-inverse .snapshare-profile-button.snapshare-gplus-button > a:focus {
+  background-color: #ea4335;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Icon Placement
+--------------------------------------------------------------*/
+/**
+ * Icons left
+ */
+.snapshare-icons-left .snapshare-profile-button > a:before {
+  margin-right: 7px;
+}
+
+/**
+ * Icons Center
+ */
+.snapshare-icons-center {
+  text-align: center;
+}
+.snapshare-icons-center .snapshare-profile-button > a:before {
+  margin-right: 0;
+  display: block;
+  font-size: 24px;
+}
+
+/*--------------------------------------------------------------
+# Size
+--------------------------------------------------------------*/
+.snapshare-size-small .snapshare-profile-button > a {
+  font-size: 12px;
+}
+
+.snapshare-size-small.snapshare-icons-center .snapshare-profile-button > a:before {
+  font-size: 16px;
+}
